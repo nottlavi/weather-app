@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="input.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- title -->
+      <h1 class="main-heading">WEATHER APP</h1>
+      <!-- tabs -->
+      <div class="tabs-container">
+        <div>
+          <p class="tab" your-weather>Your Weather</p>
+        </div>
+        <div>
+          <p class="tab" search-weather>Search Weather</p>
+        </div>
+      </div>
+      <!-- main container -->
+      <div class="main-container">
+        <!-- when no location is found -->
+        <div class="no-location-container" grant-location-page>
+          <img
+            src="https://raw.githubusercontent.com/priyansh70/Dot-Batch_WebDevelopment-Notes/refs/heads/main/Java%20Script/Mini%20Projects/Lecture28%20-%20Weather%20App/images/location.png"
+            width="85px"
+            height="85px"
+          />
+          <p>Grant Location Access</p>
+          <p>Allow Access To Get Weather Information</p>
+          <button access-location-btn>GRANT ACCESS</button>
+        </div>
+        <!-- searching for a location -->
+        <form class="form-container" data-searchForm>
+          <input placeholder="Search for City..." data-searchInput />
+          <button class="btn" type="submit">
+            <img
+              src="https://github.com/priyansh70/Dot-Batch_WebDevelopment-Notes/blob/main/Java%20Script/Mini%20Projects/Lecture28%20-%20Weather%20App/images/search.png?raw=true̦̦̦"
+              width="20"
+              height="20"
+              loading="lazy"
+            />
+          </button>
+        </form>
+       
+        <!-- no location page -->
+         <div class="error-handling-page tempClass">
+          <p>ERROR 404! <br>Enter a Valid City... </p>
+         </div>
+        <!-- loading screen -->
+        <div loading-screen class="loading-screen-container">
+          <img
+            src="https://raw.githubusercontent.com/priyansh70/Dot-Batch_WebDevelopment-Notes/refs/heads/main/Java%20Script/Mini%20Projects/Lecture28%20-%20Weather%20App/images/loading.gif"
+            height="100"
+            width="100"
+          />
+          <p>Loading...</p>
+        </div>
+        <!-- showing home's weather -->
+        <div class="home-weather-container">
+          <!-- location info -->
+          <div class="location-info">
+            <p data-cityName></p>
+            <img data-countryFlag />
+          </div>
+          <!-- weather condition -->
+          <p weather-condition class="weather-condition-para"></p>
+          <!-- weather-condition-image -->
+          <img weather-condition-image class="weather-condition-img"/>
+          <!-- displaying temprature -->
+          <p class="temprature-display-para" temprature-display></p>
+          
+           <div class="parameters-container">
+            <!-- windspeed div -->
+          <div class="windspeed-info goodBoys">
+            <img
+              src="https://github.com/priyansh70/Dot-Batch_WebDevelopment-Notes/blob/main/Java%20Script/Mini%20Projects/Lecture28%20-%20Weather%20App/images/wind.png?raw=true"
+            />
+            <p>WINDSPEED</p>
+            <p windspeed-val></p>
+          </div>
+          <!-- humidity div -->
+          <div class="humidity-info goodBoys">
+            <img
+              src="https://github.com/priyansh70/Dot-Batch_WebDevelopment-Notes/blob/main/Java%20Script/Mini%20Projects/Lecture28%20-%20Weather%20App/images/humidity.png?raw=true"
+            />
+            <p>HUMIDITY</p>
+            <p humidity-val></p>
+          </div>
+          <!-- clouds div -->
+          <div class="clouds-info goodBoys">
+            <img
+              src="https://github.com/priyansh70/Dot-Batch_WebDevelopment-Notes/blob/main/Java%20Script/Mini%20Projects/Lecture28%20-%20Weather%20App/images/cloud.png?raw=true"
+            />
+            <p>CLOUDS</p>
+            <p clouds-val></p>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
